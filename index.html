@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Count Char and Word</title>
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Tangerine">
+        <style>
+            *{
+                margin: 0%;
+                padding: 0%;
+                font-family: 'Tangerine' , sans-serif;
+                
+            }
+            div{
+            /*we use 100vh to get full size*/
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            textarea
+            {
+                border: 2px solid #0984e3;
+                border-radius: 10px;
+                font-size: 30px;
+                font-weight: 300;
+                padding: 10px 5px;
+                outline: none;
+                box-shadow: 0 0 4px 1px #b2bec3;
+            }
+
+            button
+            {
+                padding: 20px 30px;
+                background-color: #74b9ff;
+                color: white;
+                font-size: 40px;
+                font-weight: 300;
+                border-radius: 10px;
+                 border: 2px solid #0984e3;
+                 outline: none;
+                cursor: pointer;
+
+            }
+            
+
+
+        </style>
+
+    </head>
+
+    <body>
+        <div>
+             <!--It will create a box in which we can write-->
+        <textarea cols="100" rows="15" id="words" placeholder="Enter a Word"></textarea>
+
+        <br>
+        <!--it will show a data  when we click on button-->
+        <p id="showdata"></p>
+
+        <br>
+        <!---It will create a button to countwords on click-->
+        <!--countwords is use to count words in a textarea 
+        mainly here we define the function-->
+        <button onclick="countwords()">Count Char</button>
+        </div>
+
+         <script>
+            const countwords = () => 
+            {
+                let noc = document.getElementById('words').value.length;
+                alert(noc);
+                document.getElementById('showdata').innerHTML ="The Total Characters = "+ noc;
+
+            }
+
+        </script> 
+       
+    </body>
+    
+</html>
